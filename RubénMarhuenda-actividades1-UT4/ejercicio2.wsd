@@ -1,0 +1,30 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Partido{
+    +nombre: string 
+    +codigo: int 
+    +fecha: date 
+}
+class Entrada{
+    +precio: int 
+    +asiento: int 
+}
+class Abonados {
+    +nombre: string 
+    +dni: string 
+    +teléfono: int
+    +dirección: string 
+    +numSocio: int
+}
+class Simpatizantes {
+    +nombre: string 
+    +dni: string 
+    +teléfono: int
+    +dirección: string
+    +fechaAlta: date  
+}
+SociedadDeportiva -- Abonados
+SociedadDeportiva -- Simpatizantes
+Partido ..> Entrada
+
+@enduml
